@@ -3,7 +3,7 @@
 /* Este trecho de estilo se refere
 ao cabeçalho do nosso blog. */
 .header {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $fonte-padrão;
 
     &__logo {
         text-align: center;
@@ -50,14 +50,135 @@ ao cabeçalho do nosso blog. */
         }
     }
 }
+
+/*Este trecho se refere ao main do blog*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: $fonte-padrão;
+
+    &__content {
+        width: 70%;
+        padding: 40px 8px;
+    }
+
+    &__post {
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        text-decoration: none;
+        font-size: 22px;
+        color: $cor-cinza-escuro;
+        letter-spacing: 1.5;
+
+        &:hover {
+            color: $cor-roxa;
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__date {
+        margin: 0 10px;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    &__tag {
+        font-size: 14px;
+        padding: 5px 7px;
+        color: $cor-roxa;
+        border: 1px solid $cor-roxa;
+        margin: 0 10px;
+    }
+
+    &__details {
+        border: 1px solid $cor-cinza-escuro;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__description {
+        padding: 40px 0 25px;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    &__btn {
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 1.5;
+        color: $cor-roxa;
+        background-color: $cor-amarelo;
+        padding: 10px 20px;
+        transition: .3s;
+
+        &:hover {
+            color: $cor-amarelo;
+            background-color: $cor-roxa;
+        }
+    } 
+    
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $cor-cinza-escuro;
+        margin-top: 30px;
+    }
+
+    &__author {
+        width: 50%;
+        border-right: 1px solid $cor-cinza-escuro;
+    }
+
+    &__p {
+        font-size: 14px;
+        color: $cor-cinza-escuro;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__comments {
+        width: 50%;
+    }
+
+    &__a {
+        text-decoration: none;
+        font-size: 14px;
+        color: $cor-cinza-escuro;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $cor-roxa;
+        }
+    }
+}
 /*Este trecho de estilo se refere
 ao rodapé do nosso blog.*/
 
 .footer {
     text-align: center;
     padding: 20px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
+    font-family: $fonte-padrão;
+    position: relative;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
