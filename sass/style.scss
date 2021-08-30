@@ -3,7 +3,7 @@
 /* Este trecho de estilo se refere
 ao cabeçalho do nosso blog. */
 .header {
-    font-family: $fonte-padrão;
+    font-family: $fonte-padrao;
 
     &__logo {
         text-align: center;
@@ -57,7 +57,7 @@ ao cabeçalho do nosso blog. */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-family: $fonte-padrão;
+    font-family: $fonte-padrao;
 
     &__content {
         width: 70%;
@@ -177,7 +177,7 @@ ao rodapé do nosso blog.*/
 .footer {
     text-align: center;
     padding: 20px 0;
-    font-family: $fonte-padrão;
+    font-family: $fonte-padrao;
     position: relative;
     bottom: 0;
     left: 50%;
@@ -190,5 +190,86 @@ ao rodapé do nosso blog.*/
     &__txt {
         margin: auto;
         font-size: 14px;
+    }
+}
+
+/*Seção responsável pela estilização da página Sobre nós*/
+
+.about {
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: $fonte-padrao;
+
+    &__title {
+        background-color: $cor-branca;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__h1 {
+        font-size: 22px;
+        color: $cor-cinza-escuro;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__link {
+            font-size: 12px;
+            text-decoration: none;
+            color: $cor-cinza-escuro;
+
+            &:hover {
+                text-decoration: underline;
+                color: $cor-roxa;
+            }
+        }
+
+        &__img {
+            width: 10px;
+            height: 8px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__intro {
+        font-weight: 100;
+        color: $cor-cinza-escuro;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    &__split {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__img-description {
+        width: $img-width;
+    }
+
+    &__txt {
+        width: calc(100% - #{$img-width});
+    }
+
+    &__p {
+        font-size: 14px;
+        padding: 10px 20px;
+        color: $cor-cinza-escuro;
     }
 }
