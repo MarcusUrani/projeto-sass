@@ -1,3 +1,9 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 /*Este trecho se refere ao main do blog*/
 .main {
     display: flex;
@@ -114,6 +120,66 @@
 
         &:hover {
             color: $cor-roxa;
+        }
+    }
+
+    &__sidebar {
+        width: 25%;
+        padding: 40px 10px;
+    }
+
+    .sidebar {
+        &__top {
+             border: 1px solid $cor-branca;
+             text-align: center;
+             padding: 20px;
+        }
+
+        &__title {
+            background-color: $cor-amarelo;
+            text-align: center;
+            padding: 10px 20px;
+            margin: 0;
+            letter-spacing: 1.5px;
+        }
+
+        &__posts {
+            @include reset-list;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 15px 0;
+            &:not(:last-child) {
+                border-bottom: 1px dashed $cor-branca;
+            }
+        }
+
+        &__img {
+            width: 40%;
+        }
+
+        &__details {
+            width: 50%;
+            padding-left: 10px;
+        }
+
+        &__post-title {
+            font-size: 14px;
+            color: $cor-roxa;
+            @extend %no-decoration;
+
+            &:hover {
+                @extend %u-decoration;
+            }
+        }
+
+        &__post-date {
+            font-size: 12px;
+            margin: 1.5px 0 0 0;
         }
     }
 }
