@@ -1,17 +1,36 @@
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: $jty-cnt
+}
+
 @mixin reset-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+@mixin for-phone-only {
+    @media (max-width: 767,98px) { @content; }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199,98px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
 /*Este trecho se refere ao main do blog*/
 .main {
-    display: flex;
-    justify-content: center;
+    @include flx(justify-content, center);
     flex-wrap: wrap;
     font-family: $fonte-padrao;
 
     &__content {
+        @include for-phone-only {
+            width: 100%;
+        }
         width: 70%;
         padding: 40px 8px;
     }

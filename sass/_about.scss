@@ -1,3 +1,26 @@
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: $jty-cnt
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 767,98px) { @content; }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199,98px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
 /*Seção responsável pela estilização da página Sobre nós*/
 .about {
     width: 80%;
@@ -21,8 +44,7 @@
     }
 
     .breadcrumb {
-        display: flex;
-        justify-content: center;
+        @include flx(justify-content, center);
         align-items: center;
 
         &__link {
@@ -57,8 +79,7 @@
     }
 
     &__split {
-        display: flex;
-        justify-content: center;
+        @include flx(justify-content, center);
         flex-wrap: wrap;
         align-items: center;
     }

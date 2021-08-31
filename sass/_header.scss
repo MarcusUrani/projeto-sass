@@ -1,3 +1,26 @@
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: $jty-cnt
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 767,98px) { @content; }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199,98px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
 /* Este trecho de estilo se refere
 ao cabeçalho do nosso blog. */
 .header {
@@ -13,18 +36,33 @@ ao cabeçalho do nosso blog. */
 
     .menu {
         &__list {
-            display: flex;
-            justify-content: center;
+            @include flx(justify-content, center);
             border-top: 1px solid $cor-branca;
             border-bottom: 1px solid $cor-branca;
             margin-left: auto;
             margin-right: auto;
-            width: 80%;
             padding: 20px 0;
+            @include for-phone-only{
+                width: 90%;
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+            @include for-tablet-only{
+                width: 80%;
+                padding: 20px 0;
+            }
+            @include for-desktop-only{
+                width: 80%;
+                padding: 20px 0;
+            }
         }
 
         &__links {
             position: relative;
+
+            @include for-phone-only{
+                padding: 5px 0;
+            }
 
             &:not(:last-child)::after {
                 content: "";
