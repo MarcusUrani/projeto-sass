@@ -21,8 +21,20 @@
     @media (min-width: 1200px) { @content; }
 }
 
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: calculateRem($size);
+}
+
 /*Seção responsável pela estilização da página Sobre nós*/
 .about {
+    @include for-phone-only{
+        width: 90%;
+    }
+    
     width: 80%;
     margin: 0 auto 40px;
     font-family: $fonte-padrao;
@@ -34,7 +46,7 @@
     }
 
     &__h1 {
-        font-size: 22px;
+        @include font-size(22px);
         color: $cor-cinza-escuro;
         letter-spacing: 1px;
         margin-top: 5px;
@@ -48,7 +60,7 @@
         align-items: center;
 
         &__link {
-            font-size: 12px;
+            @include font-size(12px);
             text-decoration: none;
             color: $cor-cinza-escuro;
 
@@ -75,7 +87,14 @@
         width: 70%;
         margin: 30px auto;
         text-align: center;
-        font-size: 16px;
+        @include font-size(16px);
+
+        @include for-phone-only {
+            width: 90%;
+        }
+        @include for-tablet-only {
+            width: 80%;
+        }
     }
 
     &__split {
@@ -86,14 +105,21 @@
 
     &__img-description {
         width: $img-width;
+        @include for-phone-only {
+            width: 80%;
+        }
     }
 
     &__txt {
         width: calc(100% - #{$img-width});
+        @include for-phone-only {   
+        width: 90%;
+        text-align: center;
+    }
     }
 
     &__p {
-        font-size: 14px;
+        @include font-size(14px);
         padding: 10px 20px;
         color: $cor-cinza-escuro;
     }

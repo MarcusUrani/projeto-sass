@@ -21,6 +21,14 @@
     @media (min-width: 1200px) { @content; }
 }
 
+@function calculateRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: calculateRem($size);
+}
+
 /* Este trecho de estilo se refere
 ao cabeçalho do nosso blog. */
 .header {
