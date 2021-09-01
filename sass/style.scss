@@ -20,11 +20,11 @@ $img-width: 45%;
 }
 
 @mixin for-phone-only {
-    @media (max-width: 767,98px) { @content; }
+    @media (max-width: 767.98px) { @content; }
 }
 
 @mixin for-tablet-only {
-    @media (min-width: 768px) and (max-width: 1199,98px) { @content; }
+    @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
 }
 
 @mixin for-desktop-only {
@@ -39,7 +39,7 @@ $img-width: 45%;
     font-size: calculateRem($size);
 }
 
-@import "header", "footer", "about", "article";
+@import "header", "footer", "about", "article", "collection", "contact";
 
 $directions: top, bottom, left, right;
 $layout-margin-size: 10px;
