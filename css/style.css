@@ -112,10 +112,6 @@ ao rodapé do nosso blog.*/
   font-size: 1.375rem;
   color: #464646;
   letter-spacing: 1px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 0;
-  margin-right: 0;
 }
 .about .breadcrumb {
   display: flex;
@@ -137,7 +133,6 @@ ao rodapé do nosso blog.*/
 }
 .about__img {
   width: 100%;
-  margin-bottom: 20px;
 }
 .about__intro {
   font-weight: 100;
@@ -206,10 +201,6 @@ ao rodapé do nosso blog.*/
   font-size: 1.375rem;
   color: #464646;
   letter-spacing: 1px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 0;
-  margin-right: 0;
 }
 .article .breadcrumb {
   display: flex;
@@ -230,7 +221,6 @@ ao rodapé do nosso blog.*/
   height: 8px;
 }
 .article__img {
-  margin-bottom: 20px;
   width: 100%;
 }
 .article__details {
@@ -239,7 +229,6 @@ ao rodapé do nosso blog.*/
   align-items: center;
 }
 .article__date {
-  margin: 0 10px;
   font-size: 0.75rem;
   font-style: italic;
 }
@@ -248,13 +237,52 @@ ao rodapé do nosso blog.*/
   padding: 5px 7px;
   color: #a050b1;
   border: 1px solid #a050b1;
-  margin: 0 10px;
 }
 .article__content {
   font-weight: 100;
   font-size: 0.875rem;
   color: #464646;
   padding: 10px 20px;
+}
+
+.main__tag, .main__date, .article__date, .article__tag {
+  margin-top: 0;
+}
+
+.main__a, .main__p, .main__subtitle {
+  margin-top: 10px;
+}
+
+.about__h1 {
+  margin-top: 5px;
+}
+
+.main__tag, .main__date, .article__date, .article__tag {
+  margin-bottom: 0;
+}
+
+.main__a, .main__p, .about__h1, .article__h1 {
+  margin-bottom: 10px;
+}
+
+.main__subtitle, .about__img, .article__img {
+  margin-bottom: 20px;
+}
+
+.about__h1, .article__h1 {
+  margin-left: 0;
+}
+
+.main__tag, .main__date, .article__date, .article__tag {
+  margin-left: 10px;
+}
+
+.about__h1, .article__h1 {
+  margin-right: 0;
+}
+
+.main__tag, .main__date, .article__date, .article__tag {
+  margin-right: 10px;
 }
 
 /*Este trecho se refere ao main do blog*/
@@ -292,11 +320,8 @@ ao rodapé do nosso blog.*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 .main__date {
-  margin: 0 10px;
   font-size: 0.75rem;
   font-style: italic;
 }
@@ -305,7 +330,6 @@ ao rodapé do nosso blog.*/
   padding: 5px 7px;
   color: #a050b1;
   border: 1px solid #a050b1;
-  margin: 0 10px;
 }
 .main__details {
   border: 1px solid #464646;
@@ -347,8 +371,6 @@ ao rodapé do nosso blog.*/
 .main__p {
   font-size: 0.875rem;
   color: #464646;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .main__comments {
   width: 50%;
@@ -357,8 +379,6 @@ ao rodapé do nosso blog.*/
   text-decoration: none;
   font-size: 0.875rem;
   color: #464646;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .main__a:hover {
   color: #a050b1;
